@@ -1,0 +1,5 @@
+Understanding terms
+
+Ajax is asynchronous is & xml
+
+json is a javascript object Notation

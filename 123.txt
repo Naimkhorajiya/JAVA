@@ -1,0 +1,197 @@
+1 natural number 
+
+import java.util.Scanner;
+
+public class NaturalNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+
+        if (n > 0)
+            System.out.println(n + " is a Natural Number.");
+        else
+            System.out.println(n + " is NOT a Natural Number.");
+    }
+}
+
+2. Fibonaki series
+import java.util.Scanner;
+
+public class Fibonacci {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter number of terms: ");
+        int n = sc.nextInt();
+
+        int a = 0, b = 1, c;
+        System.out.print("Fibonacci Series: " + a + " " + b + " ");
+        for (int i = 2; i < n; i++) {
+            c = a + b;
+            System.out.print(c + " ");
+            a = b;
+            b = c;
+        }
+    }
+}
+
+3.factorial 
+
+import java.util.Scanner;
+
+public class Factorial {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        int fact = 1;
+
+        for (int i = 1; i <= n; i++) {
+            fact = fact * i;
+        }
+        System.out.println("Factorial of " + n + " = " + fact);
+    }
+}
+
+4.prime number 
+import java.util.Scanner;
+
+public class PrimeCheck {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int n = sc.nextInt();
+        boolean isPrime = true;
+
+        if (n <= 1)
+            isPrime = false;
+        else {
+            for (int i = 2; i <= n / 2; i++) {
+                if (n % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        if (isPrime)
+            System.out.println(n + " is a Prime Number.");
+        else
+            System.out.println(n + " is NOT a Prime Number.");
+    }
+}
+
+5. Armstrong number 
+import java.util.Scanner;
+
+public class Armstrong {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        int temp = num, sum = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+            sum += (digit * digit * digit);
+            num /= 10;
+        }
+
+        if (sum == temp)
+            System.out.println(temp + " is an Armstrong Number.");
+        else
+            System.out.println(temp + " is NOT an Armstrong Number.");
+    }
+}
+
+6. Leap year check
+import java.util.Scanner;
+
+public class LeapYear {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a year: ");
+        int year = sc.nextInt();
+
+        if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+            System.out.println(year + " is a Leap Year.");
+        else
+            System.out.println(year + " is NOT a Leap Year.");
+    }
+}
+
+7. Nested if
+import java.util.Scanner;
+
+public class NestedIf {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter marks: ");
+        int marks = sc.nextInt();
+
+        if (marks >= 35) {
+            if (marks >= 75)
+                System.out.println("Distinction");
+            else
+                System.out.println("Pass");
+        } else {
+            System.out.println("Fail");
+        }
+    }
+}
+8.switch case
+
+
+public class Operators {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        System.out.println("Division: " + (a / b));
+        System.out.println("Modulus: " + (a % b));
+
+        System.out.println("Increment: " + (++a));
+        System.out.println("Decrement: " + (--b));
+    }
+}
+
+9.=Palindrome
+import java.util.Scanner;
+
+public class Palindrome {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int num = sc.nextInt();
+        int temp = num, rev = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+            rev = rev * 10 + digit;
+            num /= 10;
+        }
+
+        if (rev == temp)
+            System.out.println(temp + " is a Palindrome.");
+        else
+            System.out.println(temp + " is NOT a Palindrome.");
+    }
+}
+
+10.Operators
+public class Operators {
+    public static void main(String[] args) {
+        int a = 10, b = 5;
+
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        System.out.println("Division: " + (a / b));
+        System.out.println("Modulus: " + (a % b));
+
+        System.out.println("Increment: " + (++a));
+        System.out.println("Decrement: " + (--b));
+    }
+}

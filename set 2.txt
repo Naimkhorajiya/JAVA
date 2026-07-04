@@ -1,0 +1,160 @@
+Task 1: Modulus and Power
+--------------------------
+import java.util.Scanner;
+
+public class Task1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first number: ");
+        double a = sc.nextDouble();
+        System.out.print("Enter second number: ");
+        double b = sc.nextDouble();
+        System.out.println("Results:");
+        System.out.println("Modulus (" + a + " % " + b + ") = " + (a % b));
+        System.out.println("Power (" + a + " ^ " + b + ") = " + Math.pow(a, b));
+    }
+}
+
+
+Task 2: Student Class
+---------------------
+public class Task2 {
+    public static void main(String[] args) {
+        Student student = new Student("Alice", 85);
+        student.showDetails();
+    }
+}
+
+class Student {
+    String name;
+    int marks;
+
+    Student(String name, int marks) {
+        this.name = name;
+        this.marks = marks;
+    }
+
+    void showDetails() {
+        System.out.println("Student Name: " + name);
+        System.out.println("Student Marks: " + marks);
+    }
+}
+
+
+Task 3: Count Vowels
+--------------------
+import java.util.Scanner;
+
+public class Task3 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = sc.nextLine().toLowerCase();
+        int count = 0;
+        for (char c : input.toCharArray()) {
+            if ("aeiou".indexOf(c) != -1) count++;
+        }
+        System.out.println("Number of vowels in the string: " + count);
+    }
+}
+
+
+Task 4: Abstract Class
+----------------------
+abstract class Shape {
+    abstract void area();
+}
+
+class Circle extends Shape {
+    double radius;
+
+    Circle(double r) {
+        radius = r;
+    }
+
+    void area() {
+        System.out.println("Area: " + (3.14 * radius * radius));
+    }
+}
+
+public class Task4 {
+    public static void main(String[] args) {
+        Shape shape = new Circle(5.0);
+        shape.area();
+    }
+}
+
+
+Task 5: Final Keyword
+---------------------
+public class Task5 {
+    public static void main(String[] args) {
+        Constant c = new Constant();
+        double area = c.calculateArea(4.0);
+        System.out.println("Area using final PI: " + area);
+    }
+}
+
+class Constant {
+    final double PI = 3.14;
+
+    double calculateArea(double radius) {
+        return PI * radius * radius;
+    }
+}
+
+
+Task 6: Simple Output
+---------------------
+public class Task6 {
+    public static void main(String[] args) {
+        System.out.println("Welcome to Task 6 - Java Output Demo!");
+    }
+}
+
+
+Task 7: Single Inheritance
+--------------------------
+class Person {
+    void displayPerson() {
+        System.out.println("This is a person.");
+    }
+}
+
+class StudentPerson extends Person {
+    void displayStudent() {
+        System.out.println("This is a student.");
+    }
+}
+
+public class Task7 {
+    public static void main(String[] args) {
+        StudentPerson sp = new StudentPerson();
+        sp.displayPerson();
+        sp.displayStudent();
+    }
+}
+
+
+Task 8: Try-Catch-Finally
+-------------------------
+import java.util.Scanner;
+
+public class Task8 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            System.out.print("Enter first number: ");
+            int a = sc.nextInt();
+            System.out.print("Enter second number: ");
+            int b = sc.nextInt();
+            int result = a / b;
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Division by zero is not allowed.");
+        } finally {
+            System.out.println("Execution completed.");
+        }
+    }
+}

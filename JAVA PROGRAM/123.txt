@@ -1,0 +1,11 @@
+index
+contect
+header 
+foter
+order
+about us
+manu
+service
+login
+resgistr
+location

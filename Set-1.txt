@@ -1,0 +1,196 @@
+Q1.
+import java.util.Scanner;
+
+public class Task1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter No1 = ");
+        int no1 = sc.nextInt();
+        System.out.print("Enter No2 = ");
+        int no2 = sc.nextInt();
+
+        int add = no1 + no2;
+        int sub = no1 - no2;
+        int mul = no1 * no2;
+        int div = no1 / no2;
+
+        System.out.println("Addition (+) = " + add);
+        System.out.println("Subtraction (-) = " + sub);
+        System.out.println("Multiplication (*) = " + mul);
+        System.out.println("Division (/) = " + div);
+
+        sc.close();
+    }
+}
+
+Q2.
+import java.util.Scanner;
+
+class Fibonacci {
+    void generateSeries(int n) {
+        int a = 0, b = 1;
+        System.out.print("Fibonacci Series: ");
+        for (int i = 1; i <= n; i++) {
+            System.out.print(a + " ");
+            int c = a + b;
+            a = b;
+            b = c;
+        }
+    }
+}
+
+public class Task2 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number of terms in the Fibonacci series: ");
+        int n = sc.nextInt();
+
+        Fibonacci f = new Fibonacci();
+        f.generateSeries(n);
+
+        sc.close();
+    }
+}
+
+Q3.
+class Factorial {
+    int num;
+
+    Factorial(int num) {
+        this.num = num;
+    }
+
+    void calculateFactorial() {
+        int fact = 1;
+        for (int i = 1; i <= num; i++) {
+            fact *= i;
+        }
+        System.out.println("The factorial of " + num + " is: " + fact);
+    }
+}
+
+public class Task3 {
+    public static void main(String[] args) {
+        Factorial f = new Factorial(5);
+        f.calculateFactorial();
+    }
+}
+
+Q4.
+import java.util.Scanner;
+
+public class Rectangle {
+
+    private double length;
+    private double width;
+
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width; // Missing code filled
+    }
+
+    public double calculateArea() {
+        return this.length * this.width; // Missing code filled
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the length of the rectangle: "); // Missing line filled
+        double length = scanner.nextDouble();
+        System.out.print("Enter the width of the rectangle: ");
+        double width = scanner.nextDouble();
+
+        scanner.close();
+
+        Rectangle rectangle = new Rectangle(length, width); // Missing code filled
+        double area = rectangle.calculateArea();
+        System.out.println("Area of the rectangle: " + area);
+    }
+}
+
+Q5.
+import java.util.Scanner;
+
+public class Task5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[] arr = new int[5];
+        int sum = 0;
+
+        System.out.println("Enter 5 integer values:");
+        for (int i = 0; i < 5; i++) {
+            arr[i] = sc.nextInt();
+            sum += arr[i];
+        }
+
+        System.out.println("Sum of all elements = " + sum);
+        sc.close();
+    }
+}
+
+Q6.
+public class Task6 {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+Q7.
+import java.util.Scanner;
+
+class Vehicle {
+    void display() {
+        System.out.println("Vehicles are used for transportation.");
+    }
+}
+
+class Car extends Vehicle {
+    void display() {
+        System.out.println("Cars are a type of vehicle.");
+    }
+}
+
+public class Task7 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter '1' to create a Car object: ");
+        int choice = sc.nextInt();
+
+        if (choice == 1) {
+            Car c = new Car();
+            c.display();
+        }
+
+        sc.close();
+    }
+}
+
+Q8.
+import java.util.Scanner;
+
+public class Task8 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the first number: ");
+        int num1 = sc.nextInt();
+        System.out.print("Enter the second number: ");
+        int num2 = sc.nextInt();
+
+        try {
+            int result = num1 / num2;
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Division by zero is not allowed.");
+        }
+
+        sc.close();
+    }
+}
